@@ -1,5 +1,5 @@
 {
-  "name": "skiki-components",
+  "name": "shiki-components",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
@@ -28,5 +28,10 @@
     "ts-node": "^10.9.2",
     "tsup": "^8.4.0",
     "typescript": "^5.8.2"
+  },
+  "exports": {
+  "import": "./dist/index.mjs",
+  "require": "./dist/index.js",
+  "types": "./dist/index.d.ts"
   }
 }

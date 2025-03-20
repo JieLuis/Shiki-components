@@ -7,11 +7,23 @@ interface Props {
   lang: BundledLanguage;
 }
 
-const ServerComponenet = async ({ children, lang }: Props) => {
+export const ServerComponenet = async ({ children, lang }: Props) => {
   const out = await codeToHtml(children, {
     lang,
     theme: "github-dark",
   });
+
+  {
+    /* 
+    Usage: 
+     <ServerComponent lang="ts">
+        {[
+          'console.log("Hello")',
+          'console.log("World")',
+        ].join('\n')}
+      </ServerComponent>
+    */
+  }
 
   return <div dangerouslySetInnerHTML={{ __html: out }} />;
 };
